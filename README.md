@@ -9,7 +9,7 @@
 相关py库、软件：python-v3.7、requests、selenium-3.141.0、BeautifulSoup-v4、chromedriver.exe、Google浏览器、pandas
 
 ## 解决方案 ##
-### 方案一（放弃）###  
+### 方案一(放弃) ###  
 **步骤：**
 1. 利用request + BeautifulSoup技术方案，首先对头条[关键字文章列表页](https://www.toutiao.com/search/?keyword=%E5%9B%BE%E7%89%87)进行爬取，
 获取每个文章详情页的url
