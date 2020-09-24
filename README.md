@@ -36,6 +36,7 @@
 
 ## 参考 ##
 [windows环境下安装selenium+python](https://www.cnblogs.com/onetheway2018/p/8568910.html)
+[Google浏览器驱动](http://npm.taobao.org/mirrors/chromedriver/)
 [Selenium with Python中文翻译文档](https://selenium-python-zh.readthedocs.io/en/latest/index.html)
 [selenium库的基本使用](https://www.jianshu.com/p/3aa45532e179)
 

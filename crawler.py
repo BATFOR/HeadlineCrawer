@@ -94,6 +94,7 @@ def main(keyword):
     all_data["release_time"] = []
     all_data["content"] = []
     print("\n↓↓↓↓↓↓↓↓↓爬取文章详情↓↓↓↓↓↓↓↓↓\n")
+    count = 0
     for t, url in tqdm(article_dic_titel_url.items()):  #解析所有文章
         article_url, title, author, release_time, content = parse_article(url, browser)
         all_data["url"].append(article_url)
@@ -101,8 +102,10 @@ def main(keyword):
         all_data["author"].append(author)
         all_data["release_time"].append(release_time)
         all_data["content"].append(content)
+        if content != "":
+            count += 1
     df = pd.DataFrame(all_data)
-    df.to_csv("spider_data/"+keyword+"_articles_info_"+str(time.time())+".csv")
+    df.to_csv("spider_data/"+keyword+"_"+str(count)+"条_articles_info_"+str(time.strftime("%Y-%m-%d %H.%M.%S", time.localtime()))+".csv")
     browser.close()
 if __name__ == "__main__":
-    main("无人艇")
+    main("无人船")
