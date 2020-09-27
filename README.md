@@ -22,10 +22,10 @@
 ### 方案二 ###
 ** 步骤：**
 1. 通过request + BeautifulSoup获取到相关文章的url
-2. 利用selenium库直接操作Google浏览器，对文章url进行访问，并对页面的最终加载效果进行解析
+2. 利用selenium库直接操作Google浏览器，对文章url进行访问，并对页面的最终加载效果进行解析（以正则表达式辅助解析文本和图片）
 
 ** 缺点：**
-1. 慢
+1. 慢(可利用多线程优化)
 
 ## 实施实例 ##
 ![展示1](./display/display1.png)
@@ -38,7 +38,10 @@
 [windows环境下安装selenium+python](https://www.cnblogs.com/onetheway2018/p/8568910.html)
 [Google浏览器驱动](http://npm.taobao.org/mirrors/chromedriver/)
 [Selenium with Python中文翻译文档](https://selenium-python-zh.readthedocs.io/en/latest/index.html)
+[Selenium获取元素html](https://www.cnblogs.com/youngleesin/p/10449050.html)
 [selenium库的基本使用](https://www.jianshu.com/p/3aa45532e179)
 
 [python中如何使用pandas创建excel文件](https://jingyan.baidu.com/article/ca41422f79039c1eaf99ed73.html)
 [pandas官方文档](https://pandas.pydata.org/)
+
+[python正则表达式模块re](https://www.docs4dev.com/docs/zh/python/3.7.2rc1/all/library-re.html)
