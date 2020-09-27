@@ -1,6 +1,6 @@
-# HeadlineCrawer
+# HeadlineCrawer  #
 今日头条爬虫
-
+  
 ## 问题描述 ##
 输入关键字keyword，爬取相关内容的文章信息，并存储（excel）
 
@@ -9,14 +9,15 @@
 相关py库、软件：python-v3.7、requests、selenium-3.141.0、BeautifulSoup-v4、chromedriver.exe、Google浏览器、pandas
 
 ## 解决方案 ##
-###方案一（放弃）###
+### 方案一（放弃）###
+
 ** 步骤：**
 1. 利用request + BeautifulSoup技术方案，首先对头条[关键字文章列表页](https://www.toutiao.com/search/?keyword=%E5%9B%BE%E7%89%87)进行爬取，
 获取每个文章详情页的url
 2. 爬取每个文章详情内容，利用BeautifulSoup解析文章内容
 
 ** 难点：**
-1. 访问爬取到的文章url时，实际在浏览器中会发生重定向(# http://toutiao.com/group/6519751747085271566/ -> http://toutiao.com/a6519751747085271566/)，此过程利用爬虫程序操作时会有难度
+1. 访问爬取到的文章url时，实际在浏览器中会发生重定向(http://toutiao.com/group/6519751747085271566/ -> http://toutiao.com/a6519751747085271566/)，此过程利用爬虫程序操作时会有难度
 2. 即使访问文章重定向后的url，返回的实际为一串js代码，经浏览器处理后才加载真实文章内容。爬虫程序模拟此过程较繁琐。
 
 ### 方案二 ###
@@ -35,6 +36,7 @@
 2. 网页结构不固定
 
 ## 参考 ##
+
 [windows环境下安装selenium+python](https://www.cnblogs.com/onetheway2018/p/8568910.html)
 [Google浏览器驱动](http://npm.taobao.org/mirrors/chromedriver/)
 [Selenium with Python中文翻译文档](https://selenium-python-zh.readthedocs.io/en/latest/index.html)
@@ -43,5 +45,4 @@
 
 [python中如何使用pandas创建excel文件](https://jingyan.baidu.com/article/ca41422f79039c1eaf99ed73.html)
 [pandas官方文档](https://pandas.pydata.org/)
-
 [python正则表达式模块re](https://www.docs4dev.com/docs/zh/python/3.7.2rc1/all/library-re.html)
