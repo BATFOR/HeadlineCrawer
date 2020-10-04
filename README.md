@@ -1,4 +1,4 @@
-# HeadlineCrawer  #
+# HeadlineCrawer(crawler.py)  #
 今日头条爬虫
   
 ## 问题描述 ##
@@ -45,3 +45,7 @@
 6. [python中如何使用pandas创建excel文件](https://jingyan.baidu.com/article/ca41422f79039c1eaf99ed73.html)
 7. [pandas官方文档](https://pandas.pydata.org/)
 8. [python正则表达式模块re](https://www.docs4dev.com/docs/zh/python/3.7.2rc1/all/library-re.html)
+9. [regex101正则表达式在线测试](https://regex101.com/)
+
+# 百家号爬虫(baijia_spider.py) #
+静态页面，采用request+BeautifulSoup-v4。

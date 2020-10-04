@@ -8,8 +8,8 @@ from tqdm import *
 import re
 import os   #<[^i]\w+[^>]*>|</\w*>
 PATT_PARSE_IMG=re.compile(r'<img (src=".*?").*?>')  #提取html中文本和图片地址
-PATT_REMOVE_HTML_PART_TAG = re.compile(r'(?!<img)(?P<ss><\w+[^>]*>|</[a-z-]*>)')   #查找html标签（除img外）用字符串""替换
-IMG_DIR_PATH = "E:\PythonWorkSpace\HeadlineCrawler\spider_data\img\\"
+PATT_REMOVE_HTML_PART_TAG = re.compile(r'(?!<img)(?P<ss><\w+[^>]*>|</[a-z\d-]*>)')   #查找html标签（除img外）用字符串""替换
+IMG_DIR_PATH = "E:/PythonWorkSpace/HeadlineCrawler/spider_data/img/"
 Temp_Img_names = []   #["xxxx.png","",...]
 
 header={
@@ -166,5 +166,6 @@ def main(keyword):
     finally:
         browser.close()
 if __name__ == "__main__":
-    main("无人船")
+    #无人艇   无人船  港口  游艇
+    main("游艇")
     # my_test()
