@@ -176,6 +176,6 @@ def main(key_word):
         del_imgs()
 
 if __name__ == "__main__":
-    main("港口")
+    main("无人驾驶船舶")
     # print(parse_article_list("无人艇", 100))
 

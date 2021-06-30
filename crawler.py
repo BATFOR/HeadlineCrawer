@@ -93,23 +93,23 @@ def parse_article(article_url:str, browser):
         browser.get(article_url)  # Load page
         time.sleep(0.2)  # Let the page load, will be added to the API
         try:
-            title = browser.find_element_by_xpath("/html/body/div/div[2]/div[2]/div[1]/h1").text
+            title = browser.find_element_by_xpath("/html/body/div[1]/div/div[2]/div[1]/div[2]/h1").text
         except selenium.common.exceptions.NoSuchElementException:
             title = ""
 
         try:
-            release_time = browser.find_element_by_xpath("/html/body/div/div[2]/div[2]/div[1]/div[1]/span[3]").text
-            author = browser.find_element_by_xpath("/html/body/div/div[2]/div[2]/div[1]/div[1]/span[2]").text
+            release_time = browser.find_element_by_xpath("/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/span[3]").text
+            author = browser.find_element_by_xpath("/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/span[2]").text
         except selenium.common.exceptions.NoSuchElementException:
             try:
-                release_time = browser.find_element_by_xpath("/html/body/div/div[2]/div[2]/div[1]/div[1]/span[2]").text
-                author = browser.find_element_by_xpath("/html/body/div/div[2]/div[2]/div[1]/div[1]/span[1]").text
+                release_time = browser.find_element_by_xpath("/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/span[2]").text
+                author = browser.find_element_by_xpath("/html/body/div[1]/div/div[2]/div[1]/div[2]/div[1]/span[1]").text
             except selenium.common.exceptions.NoSuchElementException:
                 release_time = ""
                 author = ""
 
         try:
-            content_tag = browser.find_element_by_xpath("/html/body/div/div[2]/div[2]/div[1]/article")
+            content_tag = browser.find_element_by_xpath("/html/body/div[1]/div/div[2]/div[1]/div[2]/article")
             content_html = content_tag.get_attribute("innerHTML")
             content_html = re.sub(PATT_REMOVE_HTML_PART_TAG, "", content_html)  #消除除img以外的标签
             content = re.sub(PATT_PARSE_IMG, replacement, content_html)
@@ -128,7 +128,6 @@ def my_test():
     print(content)
     browser.close()
     # print(download_img("https://p6-tt.byteimg.com/origin/pgc-image/d192ba55afe4411c805b97c5d4c127f0?from=pc",'C:/Users/Administrator/Desktop/'+str(time.strftime("%Y-%m-%d %H.%M.%S", time.localtime())) + ".png"))
-
 
 def main(keyword):
     Temp_Img_names = []
@@ -166,6 +165,6 @@ def main(keyword):
     finally:
         browser.close()
 if __name__ == "__main__":
-    #无人艇   无人船  港口  游艇
-    main("游艇")
+    #无人艇   无人船  港口  游艇  智能船舶 无人驾驶船舶
+    main("无人驾驶船舶")
     # my_test()
